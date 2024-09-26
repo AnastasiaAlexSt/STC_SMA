@@ -11,15 +11,15 @@ DataWriterXLXS::~DataWriterXLXS()
     workbook_close(workbook_);
 }
 
-void DataWriterXLXS::CreateColumnsName(const std::string &name_sheet, const std::vector<std::string> namecolumns)
+void DataWriterXLXS::CreateColumnsName(const std::string &name_sheet, const std::vector<std::string> name_columns)
 {
     if(!worksheet_.contains(name_sheet))
     {
         worksheet_[name_sheet] = workbook_add_worksheet(workbook_, name_sheet.c_str());
     }
-    for(unsigned int i = 0; i < namecolumns.size(); i++)
+    for(unsigned int i = 0; i < name_columns.size(); i++)
     {
-        worksheet_write_string(worksheet_[name_sheet], 0, i, namecolumns[i].c_str(), NULL);
+        worksheet_write_string(worksheet_[name_sheet], 0, i, name_columns[i].c_str(), NULL);
     }
 }
 

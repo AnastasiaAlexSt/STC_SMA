@@ -1,3 +1,6 @@
-[submodule "libs/libxlsxwriter"]
-	path = libs/libxlsxwriter
+[submodule "src_lib/libxlsxwriter"]
+	path = src_lib/libxlsxwriter
 	url = https://github.com/jmcnamara/libxlsxwriter.git
+[submodule "src_lib/zlib"]
+	path = src_lib/zlib
+	url = https://github.com/madler/zlib.git

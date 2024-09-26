@@ -4,7 +4,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#include "../libs/libxlsxwriter/include/xlsxwriter.h"
+#include "xlsxwriter.h"
 
 namespace XLSX {
 struct CoordCell
@@ -26,7 +26,7 @@ public:
     DataWriterXLXS(const std::string &filename);
     ~DataWriterXLXS();
 
-    void CreateColumnsName(const std::string &name_sheet, const std::vector<std::string> namecolumns);
+    void CreateColumnsName(const std::string &name_sheet, const std::vector<std::string> name_columns);
 
     template<typename T>
     void AddData(const std::string &name_sheet, T value, XLSX::CoordCell coord_cell)
